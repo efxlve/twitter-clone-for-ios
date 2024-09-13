@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		249743792C7E737E007DEAC9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 249743782C7E737E007DEAC9 /* FirebaseAnalytics */; };
+		2497437B2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2497437A2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion */; };
+		2497437D2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2497437C2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		2497437F2C7E737E007DEAC9 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 2497437E2C7E737E007DEAC9 /* FirebaseAppCheck */; };
+		249743812C7E737E007DEAC9 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 249743802C7E737E007DEAC9 /* FirebaseAppDistribution-Beta */; };
+		249743832C7E737E007DEAC9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 249743822C7E737E007DEAC9 /* FirebaseAuth */; };
+		249743852C7E737E007DEAC9 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 249743842C7E737E007DEAC9 /* FirebaseAuthCombine-Community */; };
+		249743872C7E737E007DEAC9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 249743862C7E737E007DEAC9 /* FirebaseCrashlytics */; };
+		249743892C7E737E007DEAC9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 249743882C7E737E007DEAC9 /* FirebaseDatabase */; };
+		2497438B2C7E737E007DEAC9 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 2497438A2C7E737E007DEAC9 /* FirebaseDynamicLinks */; };
+		2497438D2C7E737E007DEAC9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2497438C2C7E737E007DEAC9 /* FirebaseFirestore */; };
+		2497438F2C7E737E007DEAC9 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 2497438E2C7E737E007DEAC9 /* FirebaseFirestoreCombine-Community */; };
+		249743912C7E737E007DEAC9 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 249743902C7E737E007DEAC9 /* FirebaseFunctions */; };
+		249743932C7E737E007DEAC9 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 249743922C7E737E007DEAC9 /* FirebaseFunctionsCombine-Community */; };
+		249743952C7E737E007DEAC9 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 249743942C7E737E007DEAC9 /* FirebaseInAppMessaging-Beta */; };
+		249743972C7E737E007DEAC9 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 249743962C7E737E007DEAC9 /* FirebaseInstallations */; };
+		249743992C7E737E007DEAC9 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = 249743982C7E737E007DEAC9 /* FirebaseMLModelDownloader */; };
+		2497439B2C7E737E007DEAC9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 2497439A2C7E737E007DEAC9 /* FirebaseMessaging */; };
+		2497439D2C7E737E007DEAC9 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 2497439C2C7E737E007DEAC9 /* FirebasePerformance */; };
+		2497439F2C7E737E007DEAC9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 2497439E2C7E737E007DEAC9 /* FirebaseRemoteConfig */; };
+		249743A12C7E737E007DEAC9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 249743A02C7E737E007DEAC9 /* FirebaseStorage */; };
+		249743A32C7E737E007DEAC9 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 249743A22C7E737E007DEAC9 /* FirebaseStorageCombine-Community */; };
+		249743A52C7E737E007DEAC9 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 249743A42C7E737E007DEAC9 /* FirebaseVertexAI-Preview */; };
+		24B9C5E92C8677D900BFA130 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9C5E82C8677D900BFA130 /* SDWebImage */; };
+		24B9C5EB2C8677D900BFA130 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9C5EA2C8677D900BFA130 /* SDWebImageMapKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24ACD0FD2C7BC3E800929889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24ACD0DE2C7BC3E700929889 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24ACD0E52C7BC3E700929889;
+			remoteInfo = "Twitter Clone";
+		};
+		24ACD1072C7BC3E800929889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24ACD0DE2C7BC3E700929889 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24ACD0E52C7BC3E700929889;
+			remoteInfo = "Twitter Clone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24ACD0E62C7BC3E700929889 /* Twitter Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24ACD0FC2C7BC3E800929889 /* Twitter CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Twitter CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24ACD1062C7BC3E800929889 /* Twitter CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Twitter CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		24ACD10E2C7BC3E800929889 /* Exceptions for "Twitter Clone" folder in "Twitter Clone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: LaunchScreen.storyboard",
+				"/Localized: Main.storyboard",
+				Info.plist,
+			);
+			target = 24ACD0E52C7BC3E700929889 /* Twitter Clone */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		24ACD1122C7BC3E800929889 /* Exceptions for "Twitter Clone" folder in "Copy Bundle Resources" phase from "Twitter Clone" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 24ACD0E42C7BC3E700929889 /* Resources */;
+			membershipExceptions = (
+				Base.lproj/LaunchScreen.storyboard,
+				Base.lproj/Main.storyboard,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		24ACD0E82C7BC3E700929889 /* Twitter Clone */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				24ACD10E2C7BC3E800929889 /* Exceptions for "Twitter Clone" folder in "Twitter Clone" target */,
+				24ACD1122C7BC3E800929889 /* Exceptions for "Twitter Clone" folder in "Copy Bundle Resources" phase from "Twitter Clone" target */,
+			);
+			path = "Twitter Clone";
+			sourceTree = "<group>";
+		};
+		24ACD0FF2C7BC3E800929889 /* Twitter CloneTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Twitter CloneTests";
+			sourceTree = "<group>";
+		};
+		24ACD1092C7BC3E800929889 /* Twitter CloneUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Twitter CloneUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24ACD0E32C7BC3E700929889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249743A32C7E737E007DEAC9 /* FirebaseStorageCombine-Community in Frameworks */,
+				2497439B2C7E737E007DEAC9 /* FirebaseMessaging in Frameworks */,
+				249743992C7E737E007DEAC9 /* FirebaseMLModelDownloader in Frameworks */,
+				2497437F2C7E737E007DEAC9 /* FirebaseAppCheck in Frameworks */,
+				249743832C7E737E007DEAC9 /* FirebaseAuth in Frameworks */,
+				249743792C7E737E007DEAC9 /* FirebaseAnalytics in Frameworks */,
+				249743812C7E737E007DEAC9 /* FirebaseAppDistribution-Beta in Frameworks */,
+				2497437D2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				249743872C7E737E007DEAC9 /* FirebaseCrashlytics in Frameworks */,
+				249743892C7E737E007DEAC9 /* FirebaseDatabase in Frameworks */,
+				249743932C7E737E007DEAC9 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				249743852C7E737E007DEAC9 /* FirebaseAuthCombine-Community in Frameworks */,
+				249743A12C7E737E007DEAC9 /* FirebaseStorage in Frameworks */,
+				2497437B2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				249743912C7E737E007DEAC9 /* FirebaseFunctions in Frameworks */,
+				249743972C7E737E007DEAC9 /* FirebaseInstallations in Frameworks */,
+				2497439D2C7E737E007DEAC9 /* FirebasePerformance in Frameworks */,
+				2497438F2C7E737E007DEAC9 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				24B9C5E92C8677D900BFA130 /* SDWebImage in Frameworks */,
+				2497438D2C7E737E007DEAC9 /* FirebaseFirestore in Frameworks */,
+				2497438B2C7E737E007DEAC9 /* FirebaseDynamicLinks in Frameworks */,
+				24B9C5EB2C8677D900BFA130 /* SDWebImageMapKit in Frameworks */,
+				249743952C7E737E007DEAC9 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				249743A52C7E737E007DEAC9 /* FirebaseVertexAI-Preview in Frameworks */,
+				2497439F2C7E737E007DEAC9 /* FirebaseRemoteConfig in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24ACD0F92C7BC3E800929889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24ACD1032C7BC3E800929889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24ACD0DD2C7BC3E700929889 = {
+			isa = PBXGroup;
+			children = (
+				24ACD0E82C7BC3E700929889 /* Twitter Clone */,
+				24ACD0FF2C7BC3E800929889 /* Twitter CloneTests */,
+				24ACD1092C7BC3E800929889 /* Twitter CloneUITests */,
+				24ACD0E72C7BC3E700929889 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24ACD0E72C7BC3E700929889 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24ACD0E62C7BC3E700929889 /* Twitter Clone.app */,
+				24ACD0FC2C7BC3E800929889 /* Twitter CloneTests.xctest */,
+				24ACD1062C7BC3E800929889 /* Twitter CloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24ACD0E52C7BC3E700929889 /* Twitter Clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24ACD10F2C7BC3E800929889 /* Build configuration list for PBXNativeTarget "Twitter Clone" */;
+			buildPhases = (
+				24ACD0E22C7BC3E700929889 /* Sources */,
+				24ACD0E32C7BC3E700929889 /* Frameworks */,
+				24ACD0E42C7BC3E700929889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				24ACD0E82C7BC3E700929889 /* Twitter Clone */,
+			);
+			name = "Twitter Clone";
+			packageProductDependencies = (
+				249743782C7E737E007DEAC9 /* FirebaseAnalytics */,
+				2497437A2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion */,
+				2497437C2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				2497437E2C7E737E007DEAC9 /* FirebaseAppCheck */,
+				249743802C7E737E007DEAC9 /* FirebaseAppDistribution-Beta */,
+				249743822C7E737E007DEAC9 /* FirebaseAuth */,
+				249743842C7E737E007DEAC9 /* FirebaseAuthCombine-Community */,
+				249743862C7E737E007DEAC9 /* FirebaseCrashlytics */,
+				249743882C7E737E007DEAC9 /* FirebaseDatabase */,
+				2497438A2C7E737E007DEAC9 /* FirebaseDynamicLinks */,
+				2497438C2C7E737E007DEAC9 /* FirebaseFirestore */,
+				2497438E2C7E737E007DEAC9 /* FirebaseFirestoreCombine-Community */,
+				249743902C7E737E007DEAC9 /* FirebaseFunctions */,
+				249743922C7E737E007DEAC9 /* FirebaseFunctionsCombine-Community */,
+				249743942C7E737E007DEAC9 /* FirebaseInAppMessaging-Beta */,
+				249743962C7E737E007DEAC9 /* FirebaseInstallations */,
+				249743982C7E737E007DEAC9 /* FirebaseMLModelDownloader */,
+				2497439A2C7E737E007DEAC9 /* FirebaseMessaging */,
+				2497439C2C7E737E007DEAC9 /* FirebasePerformance */,
+				2497439E2C7E737E007DEAC9 /* FirebaseRemoteConfig */,
+				249743A02C7E737E007DEAC9 /* FirebaseStorage */,
+				249743A22C7E737E007DEAC9 /* FirebaseStorageCombine-Community */,
+				249743A42C7E737E007DEAC9 /* FirebaseVertexAI-Preview */,
+				24B9C5E82C8677D900BFA130 /* SDWebImage */,
+				24B9C5EA2C8677D900BFA130 /* SDWebImageMapKit */,
+			);
+			productName = "Twitter Clone";
+			productReference = 24ACD0E62C7BC3E700929889 /* Twitter Clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24ACD0FB2C7BC3E800929889 /* Twitter CloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24ACD1152C7BC3E800929889 /* Build configuration list for PBXNativeTarget "Twitter CloneTests" */;
+			buildPhases = (
+				24ACD0F82C7BC3E800929889 /* Sources */,
+				24ACD0F92C7BC3E800929889 /* Frameworks */,
+				24ACD0FA2C7BC3E800929889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24ACD0FE2C7BC3E800929889 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				24ACD0FF2C7BC3E800929889 /* Twitter CloneTests */,
+			);
+			name = "Twitter CloneTests";
+			packageProductDependencies = (
+			);
+			productName = "Twitter CloneTests";
+			productReference = 24ACD0FC2C7BC3E800929889 /* Twitter CloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24ACD1052C7BC3E800929889 /* Twitter CloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24ACD1182C7BC3E800929889 /* Build configuration list for PBXNativeTarget "Twitter CloneUITests" */;
+			buildPhases = (
+				24ACD1022C7BC3E800929889 /* Sources */,
+				24ACD1032C7BC3E800929889 /* Frameworks */,
+				24ACD1042C7BC3E800929889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24ACD1082C7BC3E800929889 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				24ACD1092C7BC3E800929889 /* Twitter CloneUITests */,
+			);
+			name = "Twitter CloneUITests";
+			packageProductDependencies = (
+			);
+			productName = "Twitter CloneUITests";
+			productReference = 24ACD1062C7BC3E800929889 /* Twitter CloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24ACD0DE2C7BC3E700929889 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					24ACD0E52C7BC3E700929889 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					24ACD0FB2C7BC3E800929889 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 24ACD0E52C7BC3E700929889;
+					};
+					24ACD1052C7BC3E800929889 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 24ACD0E52C7BC3E700929889;
+					};
+				};
+			};
+			buildConfigurationList = 24ACD0E12C7BC3E700929889 /* Build configuration list for PBXProject "Twitter Clone" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24ACD0DD2C7BC3E700929889;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				24B9C5E72C8677D900BFA130 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 24ACD0E72C7BC3E700929889 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24ACD0E52C7BC3E700929889 /* Twitter Clone */,
+				24ACD0FB2C7BC3E800929889 /* Twitter CloneTests */,
+				24ACD1052C7BC3E800929889 /* Twitter CloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24ACD0E42C7BC3E700929889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24ACD0FA2C7BC3E800929889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24ACD1042C7BC3E800929889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24ACD0E22C7BC3E700929889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24ACD0F82C7BC3E800929889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24ACD1022C7BC3E800929889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24ACD0FE2C7BC3E800929889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24ACD0E52C7BC3E700929889 /* Twitter Clone */;
+			targetProxy = 24ACD0FD2C7BC3E800929889 /* PBXContainerItemProxy */;
+		};
+		24ACD1082C7BC3E800929889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24ACD0E52C7BC3E700929889 /* Twitter Clone */;
+			targetProxy = 24ACD1072C7BC3E800929889 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24ACD1102C7BC3E800929889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L965BB2699;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Twitter Clone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Twitter Clone";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efxlve.Twitter-Clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24ACD1112C7BC3E800929889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L965BB2699;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Twitter Clone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Twitter Clone";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efxlve.Twitter-Clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		24ACD1132C7BC3E800929889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		24ACD1142C7BC3E800929889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24ACD1162C7BC3E800929889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L965BB2699;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efxlve.Twitter-CloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twitter Clone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Twitter Clone";
+			};
+			name = Debug;
+		};
+		24ACD1172C7BC3E800929889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L965BB2699;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efxlve.Twitter-CloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twitter Clone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Twitter Clone";
+			};
+			name = Release;
+		};
+		24ACD1192C7BC3E800929889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L965BB2699;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efxlve.Twitter-CloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Twitter Clone";
+			};
+			name = Debug;
+		};
+		24ACD11A2C7BC3E800929889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L965BB2699;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efxlve.Twitter-CloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Twitter Clone";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24ACD0E12C7BC3E700929889 /* Build configuration list for PBXProject "Twitter Clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24ACD1132C7BC3E800929889 /* Debug */,
+				24ACD1142C7BC3E800929889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24ACD10F2C7BC3E800929889 /* Build configuration list for PBXNativeTarget "Twitter Clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24ACD1102C7BC3E800929889 /* Debug */,
+				24ACD1112C7BC3E800929889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24ACD1152C7BC3E800929889 /* Build configuration list for PBXNativeTarget "Twitter CloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24ACD1162C7BC3E800929889 /* Debug */,
+				24ACD1172C7BC3E800929889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24ACD1182C7BC3E800929889 /* Build configuration list for PBXNativeTarget "Twitter CloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24ACD1192C7BC3E800929889 /* Debug */,
+				24ACD11A2C7BC3E800929889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+		24B9C5E72C8677D900BFA130 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		249743782C7E737E007DEAC9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		2497437A2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		2497437C2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		2497437E2C7E737E007DEAC9 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		249743802C7E737E007DEAC9 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		249743822C7E737E007DEAC9 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		249743842C7E737E007DEAC9 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		249743862C7E737E007DEAC9 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		249743882C7E737E007DEAC9 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		2497438A2C7E737E007DEAC9 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		2497438C2C7E737E007DEAC9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		2497438E2C7E737E007DEAC9 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		249743902C7E737E007DEAC9 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		249743922C7E737E007DEAC9 /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		249743942C7E737E007DEAC9 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		249743962C7E737E007DEAC9 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		249743982C7E737E007DEAC9 /* FirebaseMLModelDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMLModelDownloader;
+		};
+		2497439A2C7E737E007DEAC9 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		2497439C2C7E737E007DEAC9 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		2497439E2C7E737E007DEAC9 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		249743A02C7E737E007DEAC9 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		249743A22C7E737E007DEAC9 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		249743A42C7E737E007DEAC9 /* FirebaseVertexAI-Preview */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseVertexAI-Preview";
+		};
+		24B9C5E82C8677D900BFA130 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24B9C5E72C8677D900BFA130 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		24B9C5EA2C8677D900BFA130 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24B9C5E72C8677D900BFA130 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 24ACD0DE2C7BC3E700929889 /* Project object */;
+}
