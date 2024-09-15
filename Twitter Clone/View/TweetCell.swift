@@ -9,6 +9,7 @@ import UIKit
 
 protocol TweetCellDelegate: AnyObject {
     func handleProfileImageTapped(_ cell: TweetCell)
+    func handleReplyTapped(_ cell: TweetCell)
 }
 
 class TweetCell: UICollectionViewCell {
@@ -87,9 +88,16 @@ class TweetCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         backgroundColor = .systemBackground
         
+        configureUI()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        configureUI()
+    }
+    
+    func configureUI() {
         addSubview(profileImageView)
         profileImageView.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
         
@@ -119,7 +127,9 @@ class TweetCell: UICollectionViewCell {
         
         let underlineView = UIView()
         
-        let titleColorUnderline: UIColor = traitCollection.userInterfaceStyle == .dark ? .darkGray : UIColor(red: 230/255, green: 236/255, blue: 240/255, alpha: 1) 
+        let titleColorUnderline: UIColor = traitCollection.userInterfaceStyle == .dark
+            ? UIColor(red: 56/255, green: 68/255, blue: 77/255, alpha: 1)
+            : UIColor(red: 230/255, green: 236/255, blue: 240/255, alpha: 1)
         
         underlineView.backgroundColor = titleColorUnderline
         addSubview(underlineView)
@@ -137,7 +147,7 @@ class TweetCell: UICollectionViewCell {
     }
     
     @objc func handleCommentTapped() {
-        
+        delegate?.handleReplyTapped(self)
     }
     
     @objc func handleRetweetTapped() {
