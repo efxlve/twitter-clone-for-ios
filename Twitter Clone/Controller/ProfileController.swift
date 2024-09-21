@@ -57,7 +57,7 @@ class ProfileController: UICollectionViewController {
     }
     
     func checkIfUserIsFollowed() {
-        UserService.shared.chackUserIsFollowed(uid: user.uid, completion: { isFollowed in
+        UserService.shared.checkUserIsFollowed(uid: user.uid, completion: { isFollowed in
             self.user.isFollowing = isFollowed
             
             if isFollowed {
@@ -125,7 +125,9 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 90)
+        let viewModel = TweetViewModel(tweet: tweets[indexPath.row])
+        let height = viewModel.size(forWidth: view.frame.width).height
+        return CGSize(width: view.frame.width, height: height + 72)
     }
 }
 
