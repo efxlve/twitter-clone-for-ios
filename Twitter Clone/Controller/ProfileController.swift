@@ -143,6 +143,7 @@ extension ProfileController: ProfileHeaderDelegate {
         if user.isFollowing {
             UserService.shared.unfollowUser(uid: user.uid) { (ref, err) in
                 self.user.isFollowing = false
+                self.collectionView.reloadData()
 
                 UIView.transition(with: header.editProfileFollowButton, duration: 0.3, options: .transitionCrossDissolve, animations: {
                     header.editProfileFollowButton.setTitle("Follow", for: .normal)
@@ -154,6 +155,7 @@ extension ProfileController: ProfileHeaderDelegate {
         } else {
             UserService.shared.followUser(uid: user.uid) { (ref, err) in
                 self.user.isFollowing = true
+                self.collectionView.reloadData()
 
                 UIView.transition(with: header.editProfileFollowButton, duration: 0.3, options: .transitionCrossDissolve, animations: {
                     header.editProfileFollowButton.setTitle("Following", for: .normal)
@@ -161,6 +163,8 @@ extension ProfileController: ProfileHeaderDelegate {
                     header.editProfileFollowButton.layer.borderColor = UIColor.clear.cgColor
                     header.editProfileFollowButton.backgroundColor = .twitterBlue
                 }, completion: nil)
+                
+                NotificationService.shared.uploadNotification(type: .follow, user: self.user)
             }
         }
     }
