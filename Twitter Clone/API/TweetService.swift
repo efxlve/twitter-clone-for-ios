@@ -17,7 +17,7 @@ struct TweetService {
             return
         }
         
-        let values = ["uid": uid, "timestamp": Int(NSDate().timeIntervalSince1970), "likes": 0, "retweets": 0, "caption": caption] as [String: Any]
+        var values = ["uid": uid, "timestamp": Int(NSDate().timeIntervalSince1970), "likes": 0, "retweets": 0, "caption": caption] as [String: Any]
         
         switch type {
             case .tweet:
@@ -27,6 +27,8 @@ struct TweetService {
             }
             
             case .reply(let tweet):
+                values["replyingTo"] = tweet.user.username
+            
                 TWEET_REPLIES_REF.child(tweet.tweetId).childByAutoId().updateChildValues(values) { (err, ref) in
                     guard let replyKey = ref.key else { return }
                     USER_REPLIES_REF.child(uid).updateChildValues([tweet.tweetId: replyKey], withCompletionBlock: completion)
@@ -99,10 +101,11 @@ struct TweetService {
             TWEET_REPLIES_REF.child(tweetKey).child(replyKey).observeSingleEvent(of: .value) { snapshot in
                 guard let dictionary = snapshot.value as? [String: Any] else { return }
                 guard let uid = dictionary["uid"] as? String else { return }
+                let replyID = snapshot.key
                 
                 UserService.shared.fetchUser(uid: uid) { user in
-                    let tweet = Tweet(user: user, tweetId: tweetKey, dictionary: dictionary)
-                    replies.append(tweet)
+                    let reply = Tweet(user: user, tweetId: replyID, dictionary: dictionary)
+                    replies.append(reply)
                     completion(replies)
                 }
             }

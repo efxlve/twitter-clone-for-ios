@@ -39,6 +39,12 @@ class TweetController: UICollectionViewController {
         navigationItem.title = "Tweet"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barStyle = .default
+    }
+    
     // MARK: - API
     
     func fetchReplies() {
