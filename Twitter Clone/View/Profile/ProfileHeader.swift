@@ -92,7 +92,6 @@ class ProfileHeader: UICollectionReusableView {
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .black
         label.numberOfLines = 3
-        label.text = "This is a user bio that will span more than one line for testing purposes."
         return label
     }()
     
@@ -189,6 +188,7 @@ class ProfileHeader: UICollectionReusableView {
         
         fullnameLabel.text = user.fullname
         usernameLabel.text = viewModel.usernameText
+        bioLabel.text = user.bio
         
         let titleColor: UIColor = traitCollection.userInterfaceStyle == .dark ? .white : .black
         

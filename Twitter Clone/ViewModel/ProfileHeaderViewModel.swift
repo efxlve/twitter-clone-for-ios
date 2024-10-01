@@ -15,7 +15,7 @@ enum ProfileFilterOptions: Int, CaseIterable {
     var description: String {
         switch self {
         case .tweets: return "Tweets"
-        case .replies: return "Tweets & Replies"
+        case .replies: return "Replies"
         case .likes: return "Likes"
         }
     }

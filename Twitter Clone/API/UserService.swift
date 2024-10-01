@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabaseInternal
+import UIKit
 
 typealias DatabaseCompletion = ((Error?, DatabaseReference) -> Void)
 
@@ -69,5 +70,33 @@ struct UserService {
                 completion(stats)
             }
         }
+    }
+    
+    func updateProfileImage(image: UIImage, completion: @escaping(URL?) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.3) else { return }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let filename = NSUUID().uuidString
+        let ref = PROFILE_IMAGE_REF.child(filename)
+        
+        ref.putData(imageData, metadata: nil) { metadata, error in
+            ref.downloadURL { url, error in
+                guard let profileImageUrl = url?.absoluteString else { return }
+                let values = ["profileImageURL": profileImageUrl]
+                
+                USERS_REF.child(uid).updateChildValues(values) { (err, ref) in
+                    completion(url)
+                }
+            }
+        }
+    }
+    
+    func saveUserData(user: User, completion: @escaping(DatabaseCompletion)) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let values = ["fullname": user.fullname,
+                      "username": user.username,
+                      "bio": user.bio ?? "" ]
+        
+        USERS_REF.child(uid).updateChildValues(values, withCompletionBlock: completion)
     }
 }

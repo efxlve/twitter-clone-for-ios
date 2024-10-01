@@ -9,6 +9,10 @@ import UIKit
 
 private let reuseIdentifier = "EditProfileCell"
 
+protocol EditProfileControllerDelegate: AnyObject {
+    func controller(_ controller: EditProfileController, wantsToUpdate user: User)
+}
+
 class EditProfileController: UITableViewController {
     
     // MARK: - Properties
@@ -16,6 +20,13 @@ class EditProfileController: UITableViewController {
     private var user: User
     private lazy var headerView = EditProfileHeader(user: user)
     private let imagePicker = UIImagePickerController()
+    weak var delegate: EditProfileControllerDelegate?
+    
+    private var userInfoChanged = false
+    
+    private var isProfileImageChanged: Bool {
+        return selectedImage != nil
+    }
     
     private var selectedImage: UIImage? {
         didSet { headerView.profileImageView.image = selectedImage }
@@ -46,10 +57,39 @@ class EditProfileController: UITableViewController {
     }
     
     @objc func handleDone() {
-        dismiss(animated: true, completion: nil)
+        view.endEditing(true)
+        guard isProfileImageChanged || userInfoChanged else { return }
+        updateUserData()
     }
     
     // MARK: - API
+    
+    func updateUserData() {
+        if isProfileImageChanged && !userInfoChanged {
+            updateProfileImage()
+        }
+        
+        if userInfoChanged && !isProfileImageChanged {
+            UserService.shared.saveUserData(user: user) { (err, ref) in
+                self.delegate?.controller(self, wantsToUpdate: self.user)
+            }
+        }
+        
+        if userInfoChanged && isProfileImageChanged {
+            UserService.shared.saveUserData(user: user) { (err, ref) in
+                self.updateProfileImage()
+            }
+        }
+    }
+    
+    func updateProfileImage() {
+        guard let image = selectedImage else { return }
+        
+        UserService.shared.updateProfileImage(image: image) { profileImageUrl in
+            self.user.profileImageURL = profileImageUrl
+            self.delegate?.controller(self, wantsToUpdate: self.user)
+        }
+    }
     
     // MARK: Helpers
     
@@ -72,7 +112,6 @@ class EditProfileController: UITableViewController {
         
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
-            navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     func configureTableView() {
@@ -91,6 +130,8 @@ class EditProfileController: UITableViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension EditProfileController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return EditProfileOptions.allCases.count
@@ -108,6 +149,8 @@ extension EditProfileController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension EditProfileController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let option = EditProfileOptions(rawValue: indexPath.row) else { return 0 }
@@ -115,11 +158,15 @@ extension EditProfileController {
     }
 }
 
+// MARK: - EditProfileHeaderDelegate
+
 extension EditProfileController: EditProfileHeaderDelegate {
     func didTapChangeProfilePhoto() {
         present(imagePicker, animated: true, completion: nil)
     }
 }
+
+// MARK: - UIImagePickerControllerDelegate
 
 extension EditProfileController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -131,9 +178,13 @@ extension EditProfileController: UIImagePickerControllerDelegate, UINavigationCo
     }
 }
 
+// MARK: - EditProfileCellDelegate
+
 extension EditProfileController: EditProfileCellDelegate {
     func updateUserInfo(_ cell: EditProfileCell) {
         guard let viewModel = cell.viewModel else { return }
+        userInfoChanged = true
+        navigationItem.rightBarButtonItem?.isEnabled = true
         
         switch viewModel.option {
         case .fullname:
@@ -145,9 +196,5 @@ extension EditProfileController: EditProfileCellDelegate {
         case .bio:
             user.bio = cell.bioTextView.text
         }
-        
-        print("DEBUG: Fullname is \(user.fullname)")
-        print("DEBUG: Username is \(user.username)")
-        print("DEBUG: Bio is \(user.bio)")
     }
 }
