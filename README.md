@@ -10,6 +10,6 @@
   <br>
   <img width="350" alt="ss2" src="https://github.com/user-attachments/assets/da752656-8be5-4d94-a47c-a85ee16b5e5c">
   <br>
-  <img width="498" alt="ss3" src="https://github.com/user-attachments/assets/4a62dd51-4ab2-4daa-9093-cf47aeb3570c">
+  <img width="350" alt="ss3" src="https://github.com/user-attachments/assets/4a62dd51-4ab2-4daa-9093-cf47aeb3570c">
 
 </div>
