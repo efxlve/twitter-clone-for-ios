@@ -6,7 +6,7 @@
   <br><br>
   <strong>BIG UPDATE!</strong> Dark mode REMOVED!
   <br><br>
-  <img width="498" alt="ss" src="https://github.com/user-attachments/assets/e4cd6a23-bb17-4a49-a54b-48b8af84c209">
+  <img width="250" alt="ss" src="https://github.com/user-attachments/assets/e4cd6a23-bb17-4a49-a54b-48b8af84c209">
   <img width="498" alt="ss2" src="https://github.com/user-attachments/assets/da752656-8be5-4d94-a47c-a85ee16b5e5c">
   <img width="498" alt="ss3" src="https://github.com/user-attachments/assets/4a62dd51-4ab2-4daa-9093-cf47aeb3570c">
 
