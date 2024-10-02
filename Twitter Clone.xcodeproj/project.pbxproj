@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24617C012CADBF1D004B032E /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = 24617C002CADBF1D004B032E /* ActiveLabel */; };
 		249743792C7E737E007DEAC9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 249743782C7E737E007DEAC9 /* FirebaseAnalytics */; };
 		2497437B2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2497437A2C7E737E007DEAC9 /* FirebaseAnalyticsOnDeviceConversion */; };
 		2497437D2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2497437C2C7E737E007DEAC9 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -132,6 +133,7 @@
 				249743952C7E737E007DEAC9 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				249743A52C7E737E007DEAC9 /* FirebaseVertexAI-Preview in Frameworks */,
 				2497439F2C7E737E007DEAC9 /* FirebaseRemoteConfig in Frameworks */,
+				24617C012CADBF1D004B032E /* ActiveLabel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +219,7 @@
 				249743A42C7E737E007DEAC9 /* FirebaseVertexAI-Preview */,
 				24B9C5E82C8677D900BFA130 /* SDWebImage */,
 				24B9C5EA2C8677D900BFA130 /* SDWebImageMapKit */,
+				24617C002CADBF1D004B032E /* ActiveLabel */,
 			);
 			productName = "Twitter Clone";
 			productReference = 24ACD0E62C7BC3E700929889 /* Twitter Clone.app */;
@@ -303,6 +306,7 @@
 			packageReferences = (
 				249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				24B9C5E72C8677D900BFA130 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				24617BFF2CADBF1D004B032E /* XCRemoteSwiftPackageReference "ActiveLabel" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 24ACD0E72C7BC3E700929889 /* Products */;
@@ -673,6 +677,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		24617BFF2CADBF1D004B032E /* XCRemoteSwiftPackageReference "ActiveLabel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/optonaut/ActiveLabel.swift?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
+			};
+		};
 		249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -692,6 +704,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		24617C002CADBF1D004B032E /* ActiveLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24617BFF2CADBF1D004B032E /* XCRemoteSwiftPackageReference "ActiveLabel" */;
+			productName = ActiveLabel;
+		};
 		249743782C7E737E007DEAC9 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 249743772C7E7087007DEAC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
