@@ -9,8 +9,15 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+enum ActionButtonConfiguration {
+    case tweet
+    case message
+}
+
 class MainTabController: UITabBarController {
     // MARK: - Properties
+    
+    private var buttonConfig: ActionButtonConfiguration? = .tweet
     
     var user: User? {
         didSet {
@@ -27,7 +34,7 @@ class MainTabController: UITabBarController {
         button.backgroundColor = .twitterBlue
         
         let image = UIImage(named: "plus-icon")
-        let resizedImage = image?.resized(to: CGSize(width: 24, height: 24))
+        let resizedImage = image?.resized(to: CGSize(width: 26, height: 26))
         button.setImage(resizedImage, for: .normal)
 
         button.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
@@ -40,8 +47,6 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
         
         view.backgroundColor = .twitterBlue
-        
-        //logUserOut()
         authenticateUserAndConfigureUI()
     }
     
@@ -69,20 +74,21 @@ class MainTabController: UITabBarController {
         }
     }
     
-    func logUserOut() {
-        do {
-            try Auth.auth().signOut()
-            print("DEBUG: Did log user out.")
-        } catch let error {
-            print("DEBUG: Failed to sign out with error: \(error.localizedDescription)")
-        }
-    }
-    
     // MARK: - Selectors
     
     @objc func actionButtonTapped() {
-        guard let user = user else { return }
-        let controller = UploadTweetController(user: user, config: .tweet)
+        let controller: UIViewController
+        
+        switch buttonConfig {
+        case .tweet:
+            guard let user = user else { return }
+            controller = UploadTweetController(user: user, config: .tweet)
+        case .message:
+            controller = ExploreController(config: .messages)
+        case .none:
+            return
+        }
+        
         let nav = UINavigationController(rootViewController: controller)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
@@ -91,6 +97,8 @@ class MainTabController: UITabBarController {
     // MARK: - Helpers
     
     func configureUI() {
+        self.delegate = self
+        
         view.addSubview(actionButton)
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
@@ -110,7 +118,7 @@ class MainTabController: UITabBarController {
         let feed = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
         
-        let explore = ExploreController()
+        let explore = ExploreController(config: .userSearch)
         let nav2 = templateNavigationController(image: UIImage(named: "search_unselected"), rootViewController: explore)
 
         let notifications = NotificationsController()
@@ -134,5 +142,15 @@ class MainTabController: UITabBarController {
         nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
         
         return nav
+    }
+}
+
+extension MainTabController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let index = viewControllers?.firstIndex(of: viewController)
+        let image = index == 3 ? #imageLiteral(resourceName: "mail") : #imageLiteral(resourceName: "plus-icon")
+        let resizedImage = image.resized(to: CGSize(width: 26, height: 26))
+        actionButton.setImage(resizedImage, for: .normal)
+        buttonConfig = index == 3 ? .message : .tweet
     }
 }

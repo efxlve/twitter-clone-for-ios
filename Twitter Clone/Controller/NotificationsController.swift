@@ -54,11 +54,14 @@ class NotificationsController: UITableViewController {
     }
     
     func checkIfUserIsFollowed(notifications: [Notification]) {
-        for (index, notification) in notifications.enumerated() {
-            if case .follow = notification.type {
-                let user = notification.user
-                
-                UserService.shared.checkUserIsFollowed(uid: user.uid) { isFollowing in
+        guard !notifications.isEmpty else { return }
+        
+        notifications.forEach { notification in
+            guard case .follow = notification.type else { return }
+            let user = notification.user
+            
+            UserService.shared.checkUserIsFollowed(uid: user.uid) { isFollowing in
+                if let index = self.notifications.firstIndex(where: { $0.user.uid == notification.user.uid }) {
                     self.notifications[index].user.isFollowing = isFollowing
                 }
             }

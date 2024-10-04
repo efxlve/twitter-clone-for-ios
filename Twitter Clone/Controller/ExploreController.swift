@@ -7,11 +7,18 @@
 
 import UIKit
 
-private let reuseIdentifier = "TweetCell"
+private let reuseIdentifier = "UserCell"
+
+enum ExploreControllercConfiguration {
+    case messages
+    case userSearch
+}
 
 class ExploreController: UITableViewController {
     
     // MARK: - Properties
+    
+    private let config: ExploreControllercConfiguration
     
     private var users = [User]() {
         didSet { tableView.reloadData() }
@@ -30,9 +37,17 @@ class ExploreController: UITableViewController {
     
     // MARK: - Lifecycle
     
+    init(config: ExploreControllercConfiguration) {
+        self.config = config
+        super.init(style: .plain)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUI()
         fetchUsers()
         configureSearchController()
@@ -57,11 +72,17 @@ class ExploreController: UITableViewController {
         }
     }
     
+    // MARK: - Selectors
+    
+    @objc func handleCancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = "Explore"
+        navigationItem.title = config == .messages ? "New Message" : "Explore"
         
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
@@ -78,12 +99,18 @@ class ExploreController: UITableViewController {
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
+        
+        if config == .messages {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector (handleCancel))
+        }
     }
     
     func configureSearchController() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
+        
+        searchController.searchResultsUpdater = self
         
         let searchBar = searchController.searchBar
         searchBar.searchBarStyle = .minimal
@@ -135,6 +162,8 @@ extension ExploreController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text?.lowercased() else { return }
         
-        filteredUsers = users.filter({ $0.username.contains(searchText) })
+        filteredUsers = users.filter({ $0.username.localizedCaseInsensitiveContains(searchText) || $0.fullname.localizedCaseInsensitiveContains(searchText) })
+        
+        tableView.reloadData()
     }
 }
