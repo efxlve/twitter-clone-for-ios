@@ -4,7 +4,6 @@
   <p style="font-family: Arial, sans-serif;"><strong><span style="letter-spacing: 0.1em;">Clone by Muharrem Efe Çayırbahçe</span></strong></p>
   #work in progress
   <br><br>
-  <strong>BIG UPDATE!</strong> Dark mode REMOVED!
   <br><br>
   <img width="350" alt="ss" src="https://github.com/user-attachments/assets/e4cd6a23-bb17-4a49-a54b-48b8af84c209">
   <br>
