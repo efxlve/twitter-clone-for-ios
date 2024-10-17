@@ -40,7 +40,7 @@ class ActionSheetLauncher: NSObject {
         let button = UIButton(type: .system)
         button.setTitle("Cancel", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .clear
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.lightGray.cgColor

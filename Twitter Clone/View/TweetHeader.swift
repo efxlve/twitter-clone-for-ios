@@ -42,7 +42,7 @@ class TweetHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.text = "Efe"
-        label.textColor = .black
+        label.textColor = .label
         return label
     }()
     
@@ -50,14 +50,14 @@ class TweetHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.text = "@efxlve"
-        label.textColor = .lightGray
+        label.textColor = .secondaryLabel
         return label
     }()
     
     private let captionLabel: ActiveLabel = {
         let label = ActiveLabel()
         label.font = UIFont.systemFont(ofSize: 20)
-        label.textColor = .black
+        label.textColor = .label
         label.numberOfLines = 0
         label.mentionColor = .twitterBlue
         label.hashtagColor = .twitterBlue
@@ -68,7 +68,7 @@ class TweetHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.text = "6.13 PM - 12/12/2"
-        label.textColor = .lightGray
+        label.textColor = .secondaryLabel
         label.textAlignment = .left
         return label
     }()
@@ -89,8 +89,19 @@ class TweetHeader: UICollectionReusableView {
         return label
     }()
     
-    private lazy var retweetsLabel = UILabel()
-    private lazy var likesLabel = UILabel()
+    private lazy var retweetsLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .label
+        return label
+    }()
+
+    private lazy var likesLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .label
+        return label
+    }()
     
     private lazy var statsView: UIView = {
         let view = UIView()

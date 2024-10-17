@@ -91,16 +91,6 @@
 			path = "Twitter Clone";
 			sourceTree = "<group>";
 		};
-		24ACD0FF2C7BC3E800929889 /* Twitter CloneTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Twitter CloneTests";
-			sourceTree = "<group>";
-		};
-		24ACD1092C7BC3E800929889 /* Twitter CloneUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Twitter CloneUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				24ACD0E82C7BC3E700929889 /* Twitter Clone */,
-				24ACD0FF2C7BC3E800929889 /* Twitter CloneTests */,
-				24ACD1092C7BC3E800929889 /* Twitter CloneUITests */,
 				24ACD0E72C7BC3E700929889 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,9 +226,6 @@
 			dependencies = (
 				24ACD0FE2C7BC3E800929889 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				24ACD0FF2C7BC3E800929889 /* Twitter CloneTests */,
-			);
 			name = "Twitter CloneTests";
 			packageProductDependencies = (
 			);
@@ -260,9 +245,6 @@
 			);
 			dependencies = (
 				24ACD1082C7BC3E800929889 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				24ACD1092C7BC3E800929889 /* Twitter CloneUITests */,
 			);
 			name = "Twitter CloneUITests";
 			packageProductDependencies = (
